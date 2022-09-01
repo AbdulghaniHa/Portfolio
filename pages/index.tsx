@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Project from "../components/Project";
 
 const Home: NextPage = () => {
   return (
@@ -34,24 +35,8 @@ const Home: NextPage = () => {
 
         <h1 className="text-3xl mb-2 mt-48">Projects</h1>
 
-        {/* Single project card */}
-        <div className="relative">
-          {/* Black Layer */}
-          <div className="bg-black w-96 z-0 relative -right-2 top-2 h-32"></div>
+        <Project imageUrl="image" projectTitle="search engine" projectDescription="search engine for rafraf.com" />
 
-          <div className="border-2 border-slate-900 w-96 z-10 absolute top-0 bg-white">
-            <div className="border-b-2 border-slate-900">IMAGE</div>
-
-            <div className="pl-2 py-2">
-              <h1 className="">project title</h1>
-              <p className="text-xs">project small description</p>
-
-              <button className="px-2 py-0.5 mt-4 border-2 border-slate-900 bg-orange-300 text-sm hover:bg-orange-400 duration-200">
-                View project
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
