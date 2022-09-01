@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -12,61 +12,49 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div className="pt-8 pl-8">
+        <h1 className="text-3xl">Hello.</h1>
+        <h1 className="text-3xl">I'm Abdulghani.</h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+        <h1>Description about myself</h1>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <h1 className="mt-48 mb-2">Quick Links</h1>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="flex">
+          <div className="border-l-2 border-y-2 border-slate-900 p-1 px-4 bg-orange-300 cursor-pointer hover:bg-orange-400 duration-200">
+            Projects
+          </div>
+          <div className="border-2 border-slate-900 p-1 px-4 bg-orange-300 cursor-pointer hover:bg-orange-400 duration-200">
+            About
+          </div>
+          <div className="border-r-2 border-y-2 border-slate-900 p-1 px-4 bg-orange-300 cursor-pointer hover:bg-orange-400 duration-200">
+            Contacts
+          </div>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+        <h1 className="text-3xl mb-2 mt-48">Projects</h1>
+
+        {/* Single project card */}
+        <div className="relative">
+          {/* Black Layer */}
+          <div className="bg-black w-96 z-0 relative -right-2 top-2 h-32"></div>
+
+          <div className="border-2 border-slate-900 w-96 z-10 absolute top-0 bg-white">
+            <div className="border-b-2 border-slate-900">IMAGE</div>
+
+            <div className="pl-2 py-2">
+              <h1 className="">project title</h1>
+              <p className="text-xs">project small description</p>
+
+              <button className="px-2 py-0.5 mt-4 border-2 border-slate-900 bg-orange-300 text-sm hover:bg-orange-400 duration-200">
+                View project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
